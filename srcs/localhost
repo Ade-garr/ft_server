@@ -19,8 +19,17 @@
 # Default server configuration
 #
 server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name localhost;
+
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+        listen 443 ssl;
+        listen [::]:443 ssl;
 
         # SSL configuration
         #
@@ -37,13 +46,17 @@ server {
         # Don't use them in a production server!
         #
         # include snippets/snakeoil.conf;
+		ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
+		ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
 
-        root /var/www/html;
+		root /var/www/html;
 
         # Add index.php to the list if you are using PHP
-        index index.html index.htm index.nginx-debian.html index.php;
+        index index.html index.htm index.php;
 
-        server_name _;
+		autoindex on;
+
+        server_name localhost;
 
         location / {
                 # First attempt to serve request as file, then
