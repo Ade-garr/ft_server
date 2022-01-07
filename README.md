@@ -7,8 +7,8 @@
 Install docker on your system then run the following commands :
 
 ```
-docker build -t "<em>name</em>"
-docker run -p 80:80 -p 443:443 -it "<em>name</em>" --name "random_name"
+docker build -t ft_server
+docker run -p 80:80 -p 443:443 -it ft_server --name ft_server
 ```
 
 ⚠️ Subject given slightly differs from actual project.<br>
