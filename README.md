@@ -7,7 +7,7 @@
 Install docker on your system then run the following commands :
 
 ```
-docker build -t ft_server
+docker build -t ft_server .
 docker run -p 80:80 -p 443:443 -it ft_server --name ft_server
 ```
 
