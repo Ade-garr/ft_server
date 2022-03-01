@@ -1,8 +1,8 @@
-### Welcome to my ft_server repository 👋
+# 📌 ft_server 📌
 
-⭐️ The goal of this subject was to discover Docker and setup a web server with simple services (Wordpress, Phpmyadmin, MySQL)
+The goal of this subject was to discover Docker and setup a web server with simple services (Wordpress, Phpmyadmin, MySQL)
 
-## 💡 Usage
+## 🔑 How to
 
 Install docker on your system then run the following commands :
 
